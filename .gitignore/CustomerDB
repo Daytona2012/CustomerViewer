@@ -1,0 +1,40 @@
+/**
+ * 
+ */
+/**
+ * @author Daytona Dayne
+ *
+ */
+package com.daytonadayneCustomerDB;
+
+import com.daytonadayneCustomer.Customer;
+
+public class CustomerDB {
+
+	   public Customer getCustomer(int value) {
+
+	       if (value == 1001) {
+
+	           return new Customer(1001, "Barbara White",
+
+	                   "3400 Richmond Parkway #3423", "Bristol", "CT", "06010");
+
+	       } else if (value == 1002) {
+
+	           return new Customer(1002, "Karl Vang", "327 Franklin Street",
+
+	                   "Edina", "MN", "55435");
+
+	       } else if (value == 1003) {
+
+	           return new Customer(1003, "Ronda Chavan", "518 Commanche Dr.",
+
+	                   "Greensboro", "NC", "27410");
+
+	       } else {
+
+	           return null;
+
+	       }
+	   }
+	}
