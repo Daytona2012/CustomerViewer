@@ -1,0 +1,62 @@
+import java.util.Scanner;
+
+import com.daytonadayneCustomer.Customer;
+import com.daytonadayneCustomerDB.CustomerDB;
+
+public class CustomerViewer {
+
+      public static void main(String[] args) {
+
+    	//Variables  
+        Scanner sc=new Scanner(System.in);
+        String input;
+        int cust_no;
+        
+        System.out.println("Welcome to the customer Viewer");
+        System.out.println();
+        
+        do
+        {
+
+        System.out.print("Enter the a Customer Number: ");
+        cust_no=sc.nextInt();
+        System.out.println();
+        
+        CustomerDB cust = new CustomerDB();
+
+        Customer c;
+
+        c = cust.getCustomer(cust_no);
+
+           if(c!=null) {
+
+        System.out.println(c.getName());
+
+        System.out.println(c.getAddress());
+
+        System.out.print(c.getCity());
+
+        System.out.print(","+c.getState());
+
+        System.out.print(" "+c.getPostalCode());
+
+        System.out.println();
+
+         } else
+         System.out.println("There is no customer number " + cust_no + " in our records.");
+         System.out.println();
+         
+         System.out.print("Display another customer? (y/n): ");
+         input=sc.next();
+         System.out.println();
+
+        }while(input.equals("Y") || input.equals("y"));
+
+    }
+
+}
+
+
+
+
+
